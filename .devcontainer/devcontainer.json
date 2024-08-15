@@ -4,16 +4,15 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash",
-                "extensions": [
-                    "ms-python.python",
-                    "ms-vscode.cpptools",
-                    "esbenp.prettier-vscode",
-                    "GitHub.copilot",
-                    "GitHub.copilot-chat",
-                    "GitHub.codespaces"
-                ]
-            }
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "ms-dotnettools.csharp",
+                "formulahendry.code-runner",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "ms-vscode-remote.remote-containers"
+            ]
         }
     },
     "postCreateCommand": "pip install -r requirements.txt",
