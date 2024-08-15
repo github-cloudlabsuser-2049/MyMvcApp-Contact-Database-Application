@@ -1,0 +1,28 @@
+{
+    "name": "My Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-20.04",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "extensions": [
+                    "ms-python.python",
+                    "ms-vscode.cpptools",
+                    "esbenp.prettier-vscode",
+                    "GitHub.copilot",
+                    "GitHub.copilot-chat",
+                    "GitHub.codespaces"
+                ]
+            }
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "forwardPorts": [
+        3000,
+        8000
+    ],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "remoteUser": "vscode"
+}
