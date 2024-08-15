@@ -1,21 +1,23 @@
 {
     "name": "My Dev Container",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-20.04",
+    "image": "mcr.microsoft.com/vscode/devcontainers/dotnet:0-5.0",
     "customizations": {
         "vscode": {
-            "settings": {
-                "terminal.integrated.shell.linux": "/bin/bash"
-            },
             "extensions": [
-                "ms-dotnettools.csharp",
-                "formulahendry.code-runner",
+                "ms-python.python",
+                "ms-vscode.cpptools",
+                "esbenp.prettier-vscode",
                 "GitHub.copilot",
                 "GitHub.copilot-chat",
-                "ms-vscode-remote.remote-containers"
-            ]
+                "GitHub.codespaces",
+                "ms-dotnettools.csharp"
+            ],
+            "postCreateCommand": "pip install -r requirements.txt",
+            "settings": {
+               "terminal.integrated.shell.linux": "/bin/bash" 
+            }
         }
-    },
-    "postCreateCommand": "pip install -r requirements.txt",
+    },    
     "forwardPorts": [
         3000,
         8000
